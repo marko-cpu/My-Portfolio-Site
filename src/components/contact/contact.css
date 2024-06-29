@@ -80,6 +80,16 @@ button {
 
 
 
+.btn:hover {
+  background-color: #0056b3; /* Promena boje pozadine na hover */
+}
+
+.btn:active {
+  transform: scale(0.88); /* Skaliranje dugmeta na klik */
+}
+
+
+
 
 /* MEDIA QUERIES - MEDIUM DEVCIES */
 
