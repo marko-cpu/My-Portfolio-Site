@@ -5,7 +5,7 @@ import IMG2 from "../../assets/chat.png";
 import IMG3 from "../../assets/stock.png";
 import IMG4 from "../../assets/zookeper.png";
 import IMG5 from "../../assets/warehouse.png";
-import IMG6 from "../../assets/used-car.png";
+/* import IMG6 from "../../assets/used-car.png"; */
 import IMG7 from "../../assets/library.png";
 
 
@@ -45,13 +45,13 @@ const data = [
     github: "https://github.com/marko-cpu/Warehouse-Management-System",
     demo: "https://dribbble.com/shots/22987684-Personal-Web-Portfolio-Live-Website",
   },
-  {
+ /*  {
     id: 6,
     image: IMG6,
     title: "Used-Cars-Website",
     github: "https://github.com/marko-cpu/Used-Cars-Website",
     demo: "https://dribbble.com/shots/22987684-Personal-Web-Portfolio-Live-Website",
-  },
+  }, */
   {
     id: 7,
     image: IMG7,
