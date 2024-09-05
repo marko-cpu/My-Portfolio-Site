@@ -85,8 +85,11 @@ header {
 
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 100vh;
     }
+
+   
+    
 }
 
 /* MEDIA QUERIES - SMALL DEVCIES */
@@ -100,4 +103,24 @@ header {
     scroll_down {
         display: none;
     }
+    
+
+
+}
+
+@media screen and (max-width: 465px) {
+   
+
+    .me {
+   
+        width: 14rem;
+        height:30rem;
+        position: absolute;
+        left: calc(50% - 6rem);
+        margin-top: 1rem;
+        border-radius: 12rem 12rem 0 0;
+        overflow: hidden;
+        padding: 1rem 1rem 1rem;
+    }
+    
 }
