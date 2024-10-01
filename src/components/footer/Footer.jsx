@@ -26,7 +26,7 @@ const Footer = () => {
 
     <div className="footer_socials">
       <a href="https://www.linkedin.com/in/marko-djokic13" target='_blank' rel="noreferrer" ><FaLinkedin /></a>
-      <a href="https://github.com/marko-cpu"><FaGithub /></a>
+      <a href="https://github.com/marko-cpu" target='_blank' rel="noreferrer" ><FaGithub /></a>
 
     </div>
 
