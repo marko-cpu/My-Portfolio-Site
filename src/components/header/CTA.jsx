@@ -1,6 +1,5 @@
 import React from 'react'
 import EnglishCV from '../../assets/CV.pdf'
-import SerbianCV from '../../assets/CV-SRB.pdf'
 
 const CTA = () => {
 
