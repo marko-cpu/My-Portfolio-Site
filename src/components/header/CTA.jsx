@@ -1,5 +1,6 @@
 import React from 'react'
-import CV from '../../assets/CV.pdf'
+import EnglishCV from '../../assets/CV.pdf'
+import SerbianCV from '../../assets/CV-SRB.pdf'
 
 const CTA = () => {
 
@@ -7,7 +8,7 @@ const CTA = () => {
 
   return (
    <div className="cta">
-    <a href={CV} download className='btn'>Download CV</a>
+    <a href={EnglishCV} download className='btn'>Download CV</a>
     <a href="#contact"  className='btn btn-primary'>Let's Talk</a>
    </div>
   )
