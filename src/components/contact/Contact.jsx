@@ -5,10 +5,12 @@ import { FaWhatsapp } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const form = useRef();
-
+  const { t } = useTranslation();
+    
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -21,76 +23,69 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          // Clear form data after successful submission
           form.current.reset();
-          // Show success toast
-          toast.success("Message sent successfully!");
+          toast.success(t("contact.toast.success"));
         },
         (error) => {
-          console.log(error.text);
-          // Show error toast
-          toast.error("Failed to send message.");
+          toast.error(t("contact.toast.error"));
         }
       );
   };
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <h5>{t("contact.getInTouch")}</h5>
+      <h2>{t("contact.title")}</h2>
 
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
             <MdOutlineEmail className="contact_option-icon" />
-            <h4>Email</h4>
+            <h4>{t("contact.email.title")}</h4>
             <h5>markojh13@gmail.com</h5>
-            <a
-              href="mailto:markojh13@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send a message
+            <a href="mailto:markojh13@gmail.com" target="_blank" rel="noreferrer">
+              {t("contact.sendMessage")}
             </a>
           </article>
           <article className="contact_option">
             <FaWhatsapp className="contact_option-icon" />
-            <h4>WhatsApp</h4>
+            <h4>{t("contact.whatsapp.title")}</h4>
             <h5>+381693656387</h5>
             <a
               href="https://api.whatsapp.com/send?phone=+381693656387"
               target="_blank"
               rel="noreferrer"
             >
-              Send a message
+              {t("contact.sendMessage")}
             </a>
           </article>
         </div>
-
-        {/* END OF CONTACT OPTION*/}
 
         <form ref={form} onSubmit={sendEmail} className="form">
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder={t("contact.form.name.placeholder")}
             required
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder={t("contact.form.email.placeholder")}
+            required
+          />
           <textarea
             name="message"
             rows="7"
-            placeholder="Your Message"
+            placeholder={t("contact.form.message.placeholder")}
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Message
+            {t("contact.form.submit")}
           </button>
         </form>
       </div>
 
-      {/* Toastify container for notifications */}
       <ToastContainer />
     </section>
   );

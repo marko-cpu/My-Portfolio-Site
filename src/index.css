@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 
 * {
@@ -14,21 +12,30 @@
 }
 
 :root {
-    --color-bg: #1f1f38;
-    --color-bg-variant: #2c2c6c;
+    --color-bg: #1a1a2e;
+    --color-bg-variant: #16213e;
     --color-primary: #4db5ff;
     --color-primary-variant: rgba(77,181,255,0.4);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
+    --color-white: #e6f1ff;
+    --color-light: rgba(230, 241, 255, 0.6);
 
     --transition: all 400ms ease;
 
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
-
 }
 
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
 
 html {
     scroll-behavior: smooth;
@@ -40,12 +47,27 @@ html {
 
 body {
     font-family: "Merienda", sans-serif;
-    background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-   background-color: #43597d;
-
+    background: linear-gradient(45deg, #0a192f, #172a45);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
+
+/* Programming pattern overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234db5ff' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.1;
+    z-index: -1;
+}
+
 
 /* GENERAL STYLES */
 .container {
@@ -67,6 +89,7 @@ section {
    
 }
 
+
 section > h2, section > h5 {
     text-align: center;
     color: var(--color-light);
@@ -84,29 +107,55 @@ section > h2 {
 a {
     color: var(--color-primary);
     transition: var(--transition);
-    
-
+    position: relative;
 }
 
 a:hover {
     color: var(--color-white);
+    text-shadow: var(--neon-shadow);
 }
 
+
+
+/* Button Styles */
 .btn {
     width: max-content;
     display: inline-block;
     color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 0.4rem;
     cursor: pointer;
     border: 1px solid var(--color-primary);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--neon-shadow);
 }
 
 .btn:hover {
-    background: lightskyblue;
+    background: var(--color-primary);
     color: var(--color-bg);
-    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px var(--color-primary);
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent, 
+        rgba(255,255,255,0.2), 
+        transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+    animation: shine 1.5s;
 }
 
 .btn-primary {
@@ -114,11 +163,25 @@ a:hover {
     color: var(--color-bg);
 }
 
+
+
 img {
     display: block;
     width: 100%;
     object-fit: cover;
 
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* MEDIA QUERIES MEDIUM DEVCIES */
@@ -147,4 +210,5 @@ img {
     }
     
 }
+
 

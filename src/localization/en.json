@@ -1,0 +1,134 @@
+{
+    "header": {
+      "hello": "Hello I'm",
+      "name": "Marko Đokić",
+      "title": "Software Engineer",
+      "downlaodCv": "Download CV",
+      "letsTalk": "Let's talk"
+    },
+    "about": {
+        "getToKnow": "Get To Know",
+        "title": "About Me",
+        "tabs": {
+          "about": "About me",
+          "education": "Education",
+          "projects": "Projects"
+        },
+        "button": "Let's Talk",
+        "content": {
+          "about": "I am a recent graduate with a Bachelor's degree in Electrical Engineering and Computer Science from the Faculty of Engineering Sciences in Kragujevac. Currently, I am pursuing a Master's degree in the same field at the same institution. I am actively seeking opportunities to apply my theoretical knowledge in a professional setting. Eager to contribute to cutting-edge projects and thrive in a dynamic work environment, I am poised to make a meaningful impact as I embark on the next phase of my career."
+        },
+        "education": {
+          "masters": {
+            "title": "Currently Enrolled in a Master's Program",
+            "description": "The Faculty of Engineering Sciences, specializing in Electrical Engineering and Computer Science.",
+            "year": "Present"
+          },
+          "bachelors": {
+            "title": "Bachelor's Degree",
+            "description": "Faculty of Engineering Sciences, major in Computer Technology and Software Engineering."
+          },
+          "secondary": {
+            "title": "Completed Secondary Education",
+            "description": "First Technical School in Kragujevac."
+          },
+          "altFaculty": "Faculty logo",
+          "altSchool": "School logo"
+        }
+      },
+      "experience": {
+        "skillsTitle": "The Skills I Have",
+        "sectionTitle": "Technologies and Tools",
+        "technologiesHeader": "Technologies",
+        "toolsHeader": "Tools"
+      },
+      "contact": {
+        "getInTouch": "Get In Touch",
+        "title": "Contact Me",
+        "email": {
+          "title": "Email"
+        },
+        "whatsapp": {
+          "title": "WhatsApp"
+        },
+        "sendMessage": "Send a message",
+        "form": {
+          "name": {
+            "placeholder": "Your Full Name"
+          },
+          "email": {
+            "placeholder": "Your Email"
+          },
+          "message": {
+            "placeholder": "Your Message"
+          },
+          "submit": "Send Message"
+        },
+        "toast": {
+          "success": "Message sent successfully!",
+          "error": "Failed to send message."
+        }
+      },
+      "portfolio": {
+    "recentWork": "My Recent Work",
+    "projectsTitle": "Projects",
+    "githubButton": "Github",
+    "demoButton": "Live Demo",
+    "projects": {
+      "erp": {
+        "title": "Enterprise Resource Planning"
+      },
+      "techQuiz": {
+        "title": "Tech Quiz"
+      },
+      "chatRooms": {
+        "title": "Chat-Rooms"
+      },
+      "stockExchange": {
+        "title": "Stock-exchange-gRPC-Socket-Server"
+      },
+      "zookeeper": {
+        "title": "Zookeper-java"
+      },
+      "warehouse": {
+        "title": "Warehouse-Management-System"
+      },
+      "library": {
+        "title": "FullStack Library App"
+      }
+    }
+  },
+  "footer": {
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "technologies": "Technologies",
+      "softSkills": "Soft Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "copyright": "© Marko Đokić. All rights reserved"
+  },
+  "services": {
+    "softSkillsTitle": "Soft Skills",
+    "sections": {
+      "softSkills": {
+        "title": "Soft Skills",
+        "items": {
+          "organizational": "Organizational and planning skills",
+          "motivated": "Motivated",
+          "teamwork": "Team-work oriented",
+          "communication": "Good listener and communicator"
+        }
+      },
+      "projectManagement": {
+        "title": "Project Management",
+        "items": {
+          "tools": "Basic familiarity with project management tools, including Trello and Jira."
+        }
+      }
+    }
+  }
+
+    
+  }

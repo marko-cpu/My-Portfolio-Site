@@ -1,20 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import EnglishCV from '../../assets/CV-ENG.pdf'
 import SerbiaCV from '../../assets/CV-SRB.pdf'
 import Flag from 'react-world-flags';
+import { useTranslation } from "react-i18next";
 
 const CTA = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const timeoutRef = useRef(null);
+  const { t } = useTranslation();
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setIsDropdownOpen(true);
   };
 
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 100); // 1000ms = 1 sekund
+  };
   return (
     <div className="cta">
-      <div className="dropdown">
-        <button onClick={toggleDropdown} className="btn btn-primary btnd">
-          Download CV
+     <div className="dropdown" 
+           onMouseEnter={handleMouseEnter}
+           onMouseLeave={handleMouseLeave}>
+        <button className="btn btn-primary btnd">
+          {t("header.downlaodCv")}
         </button>
         {isDropdownOpen && (
           <div className="dropdown-menu">
@@ -30,7 +41,7 @@ const CTA = () => {
         )}
       </div>
       <a href="#contact" className="btn btn-primary">
-        Let's Talk
+        {t("header.letsTalk")}
       </a>
     </div>
   )

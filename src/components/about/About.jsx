@@ -7,60 +7,42 @@ import { VscFolderLibrary } from "react-icons/vsc";
 import { useState } from "react";
 import finkg from "../../assets/finkg.png";
 import first from "../../assets/first.png";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("about");
+  const { t } = useTranslation();
 
   const renderContent = () => {
     switch (activeTab) {
       case "about":
-        return (
-          <p>
-            I am a recent graduate with a Bachelor's degree in Electrical
-            Engineering and Computer Science from the Faculty of Engineering
-            Sciences in Kragujevac. Currently, I am pursuing a Master's degree
-            in the same field at the same institution. I am actively seeking
-            opportunities to apply my theoretical knowledge in a professional
-            setting. Eager to contribute to cutting-edge projects and thrive in
-            a dynamic work environment, I am poised to make a meaningful impact
-            as I embark on the next phase of my career.
-          </p>
-        );
+        return <p>{t("about.content.about")}</p>;
       case "education":
         return (
           <div className="education_content">
-            
             <div className="education_item">
-              <h3>Currently Enrolled in a Master's Program</h3>
-            
+              <h3>{t("about.education.masters.title")}</h3>
               <p>
-              <img src={finkg} className="finkg" alt="fin" />
-                The Faculty of Engineering Sciences, specializing in Electrical
-                Engineering and Computer Science.
-                <span>Present</span>
+                <img src={finkg} className="finkg" alt={t("about.education.altFaculty")} />
+                {t("about.education.masters.description")}
+                <span>{t("about.education.masters.year")}</span>
               </p>
             </div>
-          
             <div className="education_item">
-              <h3>Bachelor's Degree</h3>
-            
+              <h3>{t("about.education.bachelors.title")}</h3>
               <p>
-              <img src={finkg} className="finkg" alt="fin" />
-                Faculty of Engineering Sciences, major in Computer Technology
-                and Software Engineering.
+                <img src={finkg} className="finkg" alt={t("about.education.altFaculty")} />
+                {t("about.education.bachelors.description")}
                 <p className="year">2019-2023</p>
               </p>
-             
             </div>
             <div className="education_item">
-              <h3>Completed Secondary Education</h3>
-             
+              <h3>{t("about.education.secondary.title")}</h3>
               <p>
-              <img src={first} className="first" alt="fin" />
-                First Technical School in Kragujevac.
+                <img src={first} className="first" alt={t("about.education.altSchool")} />
+                {t("about.education.secondary.description")}
                 <p className="year">2015-2019</p>
-                </p>
-             
+              </p>
             </div>
           </div>
         );
@@ -71,13 +53,13 @@ const About = () => {
 
   return (
     <section id="about">
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+      <h5>{t("about.getToKnow")}</h5>
+      <h2>{t("about.title")}</h2>
 
       <div className="container about_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={ME} alt="Aboutimage" />
+            <img src={ME} alt="About image" />
           </div>
         </div>
 
@@ -88,29 +70,27 @@ const About = () => {
               onClick={() => setActiveTab("about")}
             >
               <FaAward className="about_icon" />
-              <h5>About me</h5>
+              <h5>{t("about.tabs.about")}</h5>
             </article>
 
             <article
-              className={`about_card ${
-                activeTab === "education" ? "active" : ""
-              }`}
+              className={`about_card ${activeTab === "education" ? "active" : ""}`}
               onClick={() => setActiveTab("education")}
             >
               <FiUsers className="about_icon" />
-              <h5>Education</h5>
+              <h5>{t("about.tabs.education")}</h5>
             </article>
             <a href="#portfolio">
               <article className="about_card">
                 <VscFolderLibrary className="about_icon" />
-                <h5>Projects</h5>
+                <h5>{t("about.tabs.projects")}</h5>
               </article>
             </a>
           </div>
 
           <div className="content_section">{renderContent()}</div>
           <a href="#contact" className="btn btn-primary">
-            Let's Talk
+            {t("about.button")}
           </a>
         </div>
       </div>

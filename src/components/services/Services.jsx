@@ -1,62 +1,53 @@
 import React from 'react'
 import './services.css'
 import {BiCheck} from 'react-icons/bi'
+import { useTranslation } from "react-i18next"
 
 const Services = () => {
+    const { t } = useTranslation()
+        
   return (
    <section id="softskills">
-   
-    <h2>Soft Skills</h2>
+    <h2>{t("services.softSkillsTitle")}</h2>
     
     <div className="container services_container">
       <article className='service'>
         <div className="service_head">
-          <h3>Soft Skills</h3>
+          <h3>{t("services.sections.softSkills.title")}</h3>
         </div>
 
         <ul className="service_list">
           <li>
             <BiCheck className='service_list-icon' />
-            <p>Organizational and planning skills</p>
+            <p>{t("services.sections.softSkills.items.organizational")}</p>
           </li>
           <li>
             <BiCheck className='service_list-icon' />
-            <p>Motivated</p>
+            <p>{t("services.sections.softSkills.items.motivated")}</p>
           </li>
           <li>
             <BiCheck className='service_list-icon' />
-            <p>Team-work oriented</p>
+            <p>{t("services.sections.softSkills.items.teamwork")}</p>
           </li>
           <li>
             <BiCheck className='service_list-icon' />
-            <p>Good listener and communicator</p>
+            <p>{t("services.sections.softSkills.items.communication")}</p>
           </li>
-          
         </ul>
       </article>
 
-      {/* ********* */}
-
-    
-
       <article className='service'>
         <div className="service_head">
-          <h3>Project Management</h3>
+          <h3>{t("services.sections.projectManagement.title")}</h3>
         </div>
 
         <ul className='service_list'>
           <li>
             <BiCheck className='service_list-icon' />
-            <p>Basic familiarity with project management tools, including Trello.</p>
+            <p>{t("services.sections.projectManagement.items.tools")}</p>
           </li>
-          
         </ul>
       </article>
-
-      {/* ********* */}
-
-
-
     </div>
    </section>
   )

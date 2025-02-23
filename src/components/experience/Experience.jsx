@@ -1,145 +1,47 @@
 import React from 'react'
 import './experience.css'
 import {BsPatchCheckFill} from 'react-icons/bs'
-
+import { useTranslation } from "react-i18next"
 
 const Experience = () => {
-  return (
-    <section id="projects">
-      <h5>The Skills I Have</h5>
-      <h2>Technologies and Tools</h2>
+    const { t } = useTranslation()
+    
+    return (
+        <section id="projects">
+            <h5>{t("experience.skillsTitle")}</h5>
+            <h2>{t("experience.sectionTitle")}</h2>
 
-      <div className="container experience_container">
-        <div className="experience_frontend">
-          <h3>Technologies</h3>
-          <div className="experience_content">
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-             <div>
-               <h4>HTML</h4>
-              
-             </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>CSS</h4>
-              
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>JavaScript</h4>
-               
-              </div>
-            </article>
-           {/*  <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-             <div>
-              <h4>NodeJs</h4>
-              
-             </div>
-            </article> */}
-             <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>React</h4>
-               
-              </div>
-            </article> 
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Java</h4>
-               
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Spring Boot</h4>
-               
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Python</h4>
-               
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>MySQL</h4>
-               
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>MongoDB</h4>
-               
-              </div>
-            </article>
-          </div>
-        </div>
+            <div className="container experience_container">
+                <div className="experience_frontend">
+                    <h3>{t("experience.technologiesHeader")}</h3>
+                    <div className="experience_content">
+                        {["HTML", "CSS", "JavaScript", "React", "Java", "Spring Boot", "Python", "MySQL", "MongoDB"].map((tech) => (
+                            <article className='experience_details' key={tech}>
+                                <BsPatchCheckFill className='experience_details-icon' />
+                                <div>
+                                    <h4>{tech}</h4>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
 
-        
-
-        <div className="experience_backend">
-        <h3>Tools</h3>
-        <div className="experience_content">
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Git & GitHub</h4>
-                
-              </div>
-            </article>
-           
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Bash/CLI</h4>
-                
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Postman</h4>
-               
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Docker</h4>
-                
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>IntelliJ</h4>
-                
-              </div>
-            </article>
-            <article className='experience_details'>
-              <BsPatchCheckFill className='experience_details-icon' />
-              <div>
-                <h4>Visual Studio Code</h4>
-               
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-    </section>
-  )
+                <div className="experience_backend">
+                    <h3>{t("experience.toolsHeader")}</h3>
+                    <div className="experience_content">
+                        {["Git & GitHub", "Bash/CLI", "Postman", "Docker", "IntelliJ", "Visual Studio Code"].map((tool) => (
+                            <article className='experience_details' key={tool}>
+                                <BsPatchCheckFill className='experience_details-icon' />
+                                <div>
+                                    <h4>{tool}</h4>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 }
- 
+
 export default Experience

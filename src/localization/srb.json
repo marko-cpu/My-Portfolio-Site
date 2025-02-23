@@ -1,0 +1,132 @@
+{
+    "header": {
+      "hello": "Zdravo, ja sam",
+      "name": "Marko Đokić",
+      "title": "Softverski Inženjer",
+     "downlaodCv": "Preuzmi CV",
+     "letsTalk": "Kontakt"
+    },
+    "about": {
+    "getToKnow": "Upoznajte me",
+    "title": "O meni",
+    "tabs": {
+      "about": "O meni",
+      "education": "Obrazovanje",
+      "projects": "Projekti"
+    },
+    "button": "Popričajmo",
+    "content": {
+      "about": "Diplomirao sam elektrotehniku i računarstvo na Fakultetu inženjerskih nauka u Kragujevcu. Trenutno nastavljam master studije u istoj oblasti na istom fakultetu. Aktivno tražim priliku da svoje teorijsko znanje primenim u profesionalnom okruženju. Spremam se da doprinesem inovativnim projektima i napredujem u dinamičnom radnom okruženju, spreman da ostvarim značajan uticaj na početku svoje karijere."
+    },
+    "education": {
+      "masters": {
+        "title": "Trenutno na master studijama",
+        "description": "Fakultet inženjerskih nauka, smer Elektrotehnika i računarstvo.",
+        "year": "Trenutno"
+      },
+      "bachelors": {
+        "title": "Osnovne akademske studije",
+        "description": "Fakultet inženjerskih nauka, smer Računarska tehnika i softversko inženjerstvo."
+      },
+      "secondary": {
+        "title": "Završena srednja škola",
+        "description": "Prva tehnička škola u Kragujevcu."
+      },
+      "altFaculty": "Logo fakulteta",
+      "altSchool": "Logo škole"
+    }
+  },
+  "experience": {
+    "skillsTitle": "Veštine koje posedujem",
+    "sectionTitle": "Tehnologije i alati",
+    "technologiesHeader": "Tehnologije",
+    "toolsHeader": "Alati"
+  },
+  "contact": {
+    "getInTouch": "Kontaktirajte me",
+    "title": "Kontakt",
+    "email": {
+      "title": "Email"
+    },
+    "whatsapp": {
+      "title": "WhatsApp"
+    },
+    "sendMessage": "Pošalji poruku",
+    "form": {
+      "name": {
+        "placeholder": "Vaše puno ime"
+      },
+      "email": {
+        "placeholder": "Vaš email"
+      },
+      "message": {
+        "placeholder": "Vaša poruka"
+      },
+      "submit": "Pošalji poruku"
+    },
+    "toast": {
+      "success": "Poruka je uspešno poslata!",
+      "error": "Greška pri slanju poruke."
+    }
+  },
+  "portfolio": {
+    "recentWork": "Moji nedavni radovi",
+    "projectsTitle": "Projekti",
+    "githubButton": "Github",
+    "demoButton": "Live Demo",
+    "projects": {
+      "erp": {
+        "title": "ERP sistem"
+      },
+      "techQuiz": {
+        "title": "Tehnički kviz"
+      },
+      "chatRooms": {
+        "title": "Chat sobe"
+      },
+      "stockExchange": {
+        "title": "Berzanski gRPC server"
+      },
+      "zookeeper": {
+        "title": "Zookeeper Java"
+      },
+      "warehouse": {
+        "title": "Sistem upravljanja skladištem"
+      },
+      "library": {
+        "title": "FullStack biblioteka"
+      }
+    }
+  },
+  "footer": {
+    "links": {
+      "home": "Početna",
+      "about": "O meni",
+      "technologies": "Tehnologije",
+      "softSkills": "Meke veštine",
+      "projects": "Projekti",
+      "contact": "Kontakt"
+    },
+    "copyright": "© Marko Đokić. Sva prava zadržana"
+  },
+  "services": {
+    "softSkillsTitle": "Meke Veštine",
+    "sections": {
+      "softSkills": {
+        "title": "Meke Veštine",
+        "items": {
+          "organizational": "Organizacione i planerske sposobnosti",
+          "motivated": "Motivisanost",
+          "teamwork": "Timski rad",
+          "communication": "Dobra komunikacija i sposobnost slušanja"
+        }
+      },
+      "projectManagement": {
+        "title": "Upravljanje Projektima",
+        "items": {
+          "tools": "Osnovno poznavanje alata za upravljanje projektima, uključujući Trello i Jira."
+        }
+      }
+    }
+  }
+  }
